@@ -260,4 +260,19 @@ describe('FizzBuzz Kata Test: \n', () => {
     it('should return CDXCIX when input is 499', () => {
         expect(romanNumber(499)).to.equal('CDXCIX');
     });
+    it('should return D when input is 500', () => {
+        expect(romanNumber(500)).to.equal('D');
+    });
+    it('should return DLXI when input is 561', () => {
+        expect(romanNumber(561)).to.equal('DLXI');
+    });
+    it('should return DCLXVI when input is 666', () => {
+        expect(romanNumber(666)).to.equal('DCLXVI');
+    });
+    it('should return DCCLXXVII when input is 777', () => {
+        expect(romanNumber(777)).to.equal('DCCLXXVII');
+    });
+    it('should return DCCCXCIX when input is 899', () => {
+        expect(romanNumber(899)).to.equal('DCCCXCIX');
+    });
 });
