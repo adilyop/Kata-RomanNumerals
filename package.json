@@ -1,0 +1,13 @@
+{
+  "name": "kata-roman-number",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./app/app",
+    "test": "mocha ./test/test"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
