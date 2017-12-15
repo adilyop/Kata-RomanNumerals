@@ -9,6 +9,13 @@ function romanNumber(input) {
     if (input === 3) {
         return 'III';
     }
+    if (input === 4) {
+        return 'IV';
+    }
+    if (input === 5) {
+        return 'V';
+    }
+    return input;
 }
 
 
