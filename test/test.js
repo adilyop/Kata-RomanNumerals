@@ -89,4 +89,46 @@ describe('FizzBuzz Kata Test: \n', () => {
     it('should return V when input is 28', () => {
         expect(romanNumber(28)).to.equal('XXVIII');
     });
+    it('should return V when input is 30', () => {
+        expect(romanNumber(30)).to.equal('XXX');
+    });
+    it('should return V when input is 31', () => {
+        expect(romanNumber(31)).to.equal('XXXI');
+    });
+    it('should return V when input is 33', () => {
+        expect(romanNumber(33)).to.equal('XXXIII');
+    });
+    it('should return V when input is 34', () => {
+        expect(romanNumber(34)).to.equal('XXXIV');
+    });
+    it('should return V when input is 35', () => {
+        expect(romanNumber(35)).to.equal('XXXV');
+    });
+    it('should return V when input is 39', () => {
+        expect(romanNumber(39)).to.equal('XXXIX');
+    });
+    it('should return XL when input is 40', () => {
+        expect(romanNumber(40)).to.equal('XL');
+    });
+    it('should return XLI when input is 41', () => {
+        expect(romanNumber(41)).to.equal('XLI');
+    });
+    it('should return XLIII when input is 43', () => {
+        expect(romanNumber(43)).to.equal('XLIII');
+    });
+    it('should return XLIV when input is 44', () => {
+        expect(romanNumber(44)).to.equal('XLIV');
+    });
+    it('should return XLV when input is 45', () => {
+        expect(romanNumber(45)).to.equal('XLV');
+    });
+    it('should return XLVIII when input is 48', () => {
+        expect(romanNumber(48)).to.equal('XLVIII');
+    });
+    it('should return XLVIII when input is 49', () => {
+        expect(romanNumber(49)).to.equal('XLIX');
+    });
+    it('should return L when input is 50', () => {
+        expect(romanNumber(50)).to.equal('L');
+    });
 });
