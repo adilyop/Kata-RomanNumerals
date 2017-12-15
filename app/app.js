@@ -1,39 +1,56 @@
 
 function romanNumber(input) {
-    if (input < 4) {
-        return 'I'.repeat(input);
+    let result = '';
+    // if (input < 4) {
+    //     result = 'I'.repeat(input);
+    // }
+    // if (input === 4) {
+    //     result = 'IV';
+    // }
+    // if (input >= 5 && input <= 8) {
+    //     result = 'V' + 'I'.repeat(input % 5);
+    // }
+    // if (input === 9) {
+    //     result = 'IX'
+    // }
+    // if (input >= 10 && input <= 13) {
+    //     result = 'X' + 'I'.repeat(input % 5);
+    // }
+    // if (input === 14) {
+    //     result = 'XIV';
+    // }
+    // if (input >= 15 && input <= 18) {
+    //     result = 'XV' + 'I'.repeat(input % 5);
+    // }
+    // if (input === 19) {
+    //     result = 'XIX';
+    // }
+    // if (input >= 20 && input <= 23) {
+    //     result = 'XX' + 'I'.repeat(input % 5);
+    // }
+    // if (input === 24) {
+    //     result = 'XXIV';
+    // }
+    // if (input >= 25 && input <= 28) {
+    //     result = 'XXV' + 'I'.repeat(input % 5);
+    // }
+
+    if (input / 10) {
+        result += 'X'.repeat(input / 10);
     }
-    if (input === 4) {
-        return 'IV';
+    if (input % 10 === 4) {
+        result += 'IV';
     }
-    if (input >= 5 && input <= 8) {
-        return 'V' + 'I'.repeat(input % 5);
+    if (input % 10 === 9) {
+        result += 'IX';
     }
-    if (input === 9) {
-        return 'IX'
+    if (input % 10 >= 5 && input % 10 <= 8) {
+        result += 'V' + 'I'.repeat(input % 5);
     }
-    if (input >= 10 && input <= 13) {
-        return 'X' + 'I'.repeat(input % 5);
+    if (input % 10 >= 1 && input % 10 <= 3) {
+        result += 'I'.repeat(input % 10);
     }
-    if (input === 14) {
-        return 'XIV';
-    }
-    if (input >= 15 && input <= 18) {
-        return 'XV' + 'I'.repeat(input % 5);
-    }
-    if (input === 19) {
-        return 'XIX';
-    }
-    if (input >= 20 && input <= 23) {
-        return 'XX' + 'I'.repeat(input % 5);
-    }
-    if (input === 24) {
-        return 'XXIV';
-    }
-    if (input >= 25 && input <= 28) {
-        return 'XXV' + 'I'.repeat(input % 5);
-    }
-    return input;
+    return result;
 }
 
 

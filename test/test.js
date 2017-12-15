@@ -20,46 +20,46 @@ describe('FizzBuzz Kata Test: \n', () => {
     it('should return V when input is 5', () => {
         expect(romanNumber(5)).to.equal('V');
     });
-    it('should return V when input is 6', () => {
+    it('should return VI when input is 6', () => {
         expect(romanNumber(6)).to.equal('VI');
     });
-    it('should return V when input is 7', () => {
+    it('should return VII when input is 7', () => {
         expect(romanNumber(7)).to.equal('VII');
     });
-    it('should return V when input is 8', () => {
+    it('should return VIII when input is 8', () => {
         expect(romanNumber(8)).to.equal('VIII');
     });
-    it('should return V when input is 9', () => {
+    it('should return XI when input is 9', () => {
         expect(romanNumber(9)).to.equal('IX');
     });
-    it('should return V when input is 10', () => {
+    it('should return X when input is 10', () => {
         expect(romanNumber(10)).to.equal('X');
     });
-    it('should return V when input is 11', () => {
+    it('should return XI when input is 11', () => {
         expect(romanNumber(11)).to.equal('XI');
     });
-    it('should return V when input is 12', () => {
+    it('should return XII when input is 12', () => {
         expect(romanNumber(12)).to.equal('XII');
     });
-    it('should return V when input is 13', () => {
+    it('should return XIII when input is 13', () => {
         expect(romanNumber(13)).to.equal('XIII');
     });
-    it('should return V when input is 14', () => {
+    it('should return XIV when input is 14', () => {
         expect(romanNumber(14)).to.equal('XIV');
     });
-    it('should return V when input is 15', () => {
+    it('should return XV when input is 15', () => {
         expect(romanNumber(15)).to.equal('XV');
     });
-    it('should return V when input is 16', () => {
+    it('should return XVI when input is 16', () => {
         expect(romanNumber(16)).to.equal('XVI');
     });
-    it('should return V when input is 17', () => {
+    it('should return XVII when input is 17', () => {
         expect(romanNumber(17)).to.equal('XVII');
     });
     it('should return V when input is 18', () => {
         expect(romanNumber(18)).to.equal('XVIII');
     });
-    it('should return V when input is 19', () => {
+    it('should return XVIII when input is 19', () => {
         expect(romanNumber(19)).to.equal('XIX');
     });
     it('should return V when input is 20', () => {
