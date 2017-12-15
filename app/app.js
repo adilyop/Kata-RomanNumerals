@@ -6,17 +6,8 @@ function romanNumber(input) {
     if (input === 4) {
         return 'IV';
     }
-    if (input === 5) {
-        return 'V';
-    }
-    if (input === 6) {
-        return 'VI';
-    }
-    if (input === 7) {
-        return 'VII';
-    }
-    if (input === 8) {
-        return 'VIII';
+    if (input >= 5 || input <= 8) {
+        return 'V' + 'I'.repeat(input % 5);
     }
     return input;
 }
