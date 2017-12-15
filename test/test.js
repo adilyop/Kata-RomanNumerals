@@ -200,4 +200,64 @@ describe('FizzBuzz Kata Test: \n', () => {
     it('should return XC when input is 90', () => {
         expect(romanNumber(90)).to.equal('XC');
     });
+    it('should return XC when input is 91', () => {
+        expect(romanNumber(91)).to.equal('XCI');
+    });
+    it('should return XC when input is 92', () => {
+        expect(romanNumber(92)).to.equal('XCII');
+    });
+    it('should return XC when input is 93', () => {
+        expect(romanNumber(93)).to.equal('XCIII');
+    });
+    it('should return XC when input is 94', () => {
+        expect(romanNumber(94)).to.equal('XCIV');
+    });
+    it('should return XC when input is 95', () => {
+        expect(romanNumber(95)).to.equal('XCV');
+    });
+    it('should return XC when input is 96', () => {
+        expect(romanNumber(96)).to.equal('XCVI');
+    });
+    it('should return XC when input is 97', () => {
+        expect(romanNumber(97)).to.equal('XCVII');
+    });
+    it('should return XC when input is 98', () => {
+        expect(romanNumber(98)).to.equal('XCVIII');
+    });
+    it('should return XC when input is 99', () => {
+        expect(romanNumber(99)).to.equal('XCIX');
+    });
+    it('should return C when input is 100', () => {
+        expect(romanNumber(100)).to.equal('C');
+    });
+    it('should return CXIII when input is 113', () => {
+        expect(romanNumber(113)).to.equal('CXIII');
+    });
+    it('should return CXXIX when input is 129', () => {
+        expect(romanNumber(129)).to.equal('CXXIX');
+    });
+    it('should return CXLIV when input is 144', () => {
+        expect(romanNumber(144)).to.equal('CXLIV');
+    });
+    it('should return CCXLIII when input is 243', () => {
+        expect(romanNumber(243)).to.equal('CCXLIII');
+    });
+    it('should return CCCXX when input is 320', () => {
+        expect(romanNumber(320)).to.equal('CCCXX');
+    });
+    it('should return CCCXCIX when input is 399', () => {
+        expect(romanNumber(399)).to.equal('CCCXCIX');
+    });
+    it('should return CD when input is 400', () => {
+        expect(romanNumber(400)).to.equal('CD');
+    });
+    it('should return CDXXIII when input is 423', () => {
+        expect(romanNumber(423)).to.equal('CDXXIII');
+    });
+    it('should return CDLXXXIX when input is 489', () => {
+        expect(romanNumber(489)).to.equal('CDLXXXIX');
+    });
+    it('should return CDXCIX when input is 499', () => {
+        expect(romanNumber(499)).to.equal('CDXCIX');
+    });
 });

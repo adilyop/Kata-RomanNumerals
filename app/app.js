@@ -34,6 +34,13 @@ function romanNumber(input) {
     // if (input >= 25 && input <= 28) {
     //     result = 'XXV' + 'I'.repeat(input % 5);
     // }
+    if (Math.floor(input / 100) === 4) {
+        result += 'CD';
+    }
+    if (input / 100 < 4) {
+        result += 'C'.repeat(input / 100);
+    }
+    input = input % 100;
     if (Math.floor(input / 10) === 9) {
         result += 'XC';
     }
