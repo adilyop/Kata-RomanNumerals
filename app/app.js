@@ -38,6 +38,7 @@ function romanNumber(input) {
     if (input / 50) {
         result += 'L'.repeat(input / 50);
     }
+    input = input % 50;
     if (Math.floor(input / 10) === 4) {
         result += 'XL';
     }

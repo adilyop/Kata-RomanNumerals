@@ -131,4 +131,25 @@ describe('FizzBuzz Kata Test: \n', () => {
     it('should return L when input is 50', () => {
         expect(romanNumber(50)).to.equal('L');
     });
+    it('should return LI when input is 51', () => {
+        expect(romanNumber(51)).to.equal('LI');
+    });
+    it('should return LIII when input is 53', () => {
+        expect(romanNumber(53)).to.equal('LIII');
+    });
+    it('should return LIV when input is 54', () => {
+        expect(romanNumber(54)).to.equal('LIV');
+    });
+    it('should return LV when input is 55', () => {
+        expect(romanNumber(55)).to.equal('LV');
+    });
+    it('should return LVIII when input is 58', () => {
+        expect(romanNumber(58)).to.equal('LVIII');
+    });
+    it('should return LIX when input is 59', () => {
+        expect(romanNumber(59)).to.equal('LIX');
+    });
+    it('should return LX when input is 60', () => {
+        expect(romanNumber(60)).to.equal('LX');
+    });
 });
