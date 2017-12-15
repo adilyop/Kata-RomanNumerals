@@ -59,4 +59,19 @@ describe('FizzBuzz Kata Test: \n', () => {
     it('should return V when input is 18', () => {
         expect(romanNumber(18)).to.equal('XVIII');
     });
+    it('should return V when input is 19', () => {
+        expect(romanNumber(19)).to.equal('XIX');
+    });
+    it('should return V when input is 20', () => {
+        expect(romanNumber(20)).to.equal('XX');
+    });
+    it('should return V when input is 21', () => {
+        expect(romanNumber(21)).to.equal('XXI');
+    });
+    it('should return V when input is 22', () => {
+        expect(romanNumber(22)).to.equal('XXII');
+    });
+    it('should return V when input is 23', () => {
+        expect(romanNumber(23)).to.equal('XXIII');
+    });
 });

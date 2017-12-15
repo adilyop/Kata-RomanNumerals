@@ -21,6 +21,12 @@ function romanNumber(input) {
     if (input >= 15 && input <= 18) {
         return 'XV' + 'I'.repeat(input % 5);
     }
+    if (input === 19) {
+        return 'XIX';
+    }
+    if (input >= 20 && input <= 23) {
+        return 'XX' + 'I'.repeat(input % 5);
+    }
     return input;
 }
 
