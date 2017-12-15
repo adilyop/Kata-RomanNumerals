@@ -12,6 +12,9 @@ function romanNumber(input) {
     if (input === 9) {
         return 'IX'
     }
+    if (input >= 10 && input <= 13) {
+        return 'X' + 'I'.repeat(input % 5);
+    }
     return input;
 }
 
