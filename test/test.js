@@ -14,4 +14,10 @@ describe('FizzBuzz Kata Test: \n', () => {
     it('should return III when input is 3', () => {
         expect(romanNumber(3)).to.equal('III');
     });
+    it('should return IV when input is 4', () => {
+        expect(romanNumber(4)).to.equal('IV');
+    });
+    it('should return V when input is 5', () => {
+        expect(romanNumber(5)).to.equal('V');
+    });
 });
