@@ -1,95 +1,62 @@
 
-function romanNumber(input) {
-    let result = '';
-    result += 'M'.repeat(input / 1000);
-    input = input % 1000;
-    if (Math.floor(input / 100) === 9) {
-        result += 'CM';
+function romanNumber(n){
+    if (isNaN(n) || n === '') {
+        return 'Error';
     }
-    input = input % 900;
-    if (input / 500) {
-        result += 'D'.repeat(input / 500);
-    }
-    input = input % 500;
-    if (Math.floor(input / 100) === 4) {
-        result += 'CD';
-    }
-    if (input / 100 < 4) {
-        result += 'C'.repeat(input / 100);
-    }
-    input = input % 100;
-    if (Math.floor(input / 10) === 9) {
-        result += 'XC';
-    }
-    input = input % 90;
-    result += 'L'.repeat(input / 50);
-    input = input % 50;
-    if (Math.floor(input / 10) === 4) {
-        result += 'XL';
-    }
-    if (input / 10 < 4) {
-        result += 'X'.repeat(input / 10);
-    }
-    if (input % 10 === 4) {
-        result += 'IV';
-    }
-    if (input % 10 === 9) {
-        result += 'IX';
-    }
-    if (input % 10 >= 5 && input % 10 <= 8) {
-        result += 'V' + 'I'.repeat(input % 5);
-    }
-    if (input % 10 >= 1 && input % 10 <= 3) {
-        result += 'I'.repeat(input % 10);
-    }
-    return result;
+    var r = ''
+        for (var c = 0; c < 4; c++) {
+            r += toRomanNumber(getDigitByIndex(toFourDigitFormat(n), c), c);
+        }
+        return r        
 }
-function romanNumberRecursive(input) {
-    let result = '';
-    while (input !== 0) {
-        result += 'M'.repeat(input / 1000);
 
-    }
-    result += 'M'.repeat(input / 1000);
-    input = input % 1000;
-    if (Math.floor(input / 100) === 9) {
-        result += 'CM';
-    }
-    input = input % 900;
-    if (input / 500) {
-        result += 'D'.repeat(input / 500);
-    }
-    input = input % 500;
-    if (Math.floor(input / 100) === 4) {
-        result += 'CD';
-    }
-    if (input / 100 < 4) {
-        result += 'C'.repeat(input / 100);
-    }
-    input = input % 100;
-    if (Math.floor(input / 10) === 9) {
-        result += 'XC';
-    }
-    input = input % 90;
-    result += 'L'.repeat(input / 50);
-    input = input % 50;
-    if (Math.floor(input / 10) === 4) {
-        result += 'XL';
-    }
-    if (input / 10 < 4) {
-        result += 'X'.repeat(input / 10);
-    }
-    if (input % 10 === 4) {
-        result += 'IV';
-    }
-    if (input % 10 === 9) {
-        result += 'IX';
-    }
-    if (input % 10 >= 5 && input % 10 <= 8) {
-        result += 'V' + 'I'.repeat(input % 5);
-    }
-    if (input % 10 >= 1 && input % 10 <= 3) {
-        result += 'I'.repeat(input % 10);
+function toFourDigitFormat(input){
+    return  '0'.repeat(4 - input.toString().length) + '' + input;
+}
+
+function getDigitByIndex(input, index){
+    return input.toString()[index] 
+}
+
+function toRomanNumber(input, index) {
+    let result = '';
+    switch (index) {
+        case 0:
+            return 'M'.repeat(input);
+            break;
+        case 1:
+            if(input < 4)
+                return 'C'.repeat(input);
+            else if(input == 4)
+                return 'CD';
+            else if(input < 9)
+                return 'D' + 'C'.repeat(input - 5)
+            else if(input == 9)
+                return 'CM';
+        break;
+        case 2:
+            if(input < 4)
+                return 'X'.repeat(input);
+            else if(input == 4)
+                return 'XL';
+            else if(input < 9)
+                return 'L' + 'X'.repeat(input - 5)
+            else if(input == 9)
+                return 'XC';
+        break;
+        case 3:
+            if(input < 4)
+                return 'I'.repeat(input);
+            else if(input == 4)
+                return 'IV';
+            else if(input < 9)
+                return 'V' + 'I'.repeat(input - 5)
+            else if(input == 9)
+                return 'IX';
+        break;
+        default:
+            return ''
+        break;
     }
     return result;
 }
