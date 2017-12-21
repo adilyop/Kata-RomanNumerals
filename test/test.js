@@ -2,9 +2,10 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const romanNumber = require('../app/app');
+const romanNumber = require('../app/roman').toRomanNumber;
+const arabicNumber = require('../app/roman').toArabicNumber;
 
-describe('Roman Numerals Kata Test: \n', () => {
+describe('to Roman Numerals Test: \n', () => {
     it('should return I* when %10 is 1, 2 or 3', () => {
         expect(romanNumber(1)).to.equal('I');
         expect(romanNumber(12)).to.equal('XII');
@@ -44,5 +45,43 @@ describe('Roman Numerals Kata Test: \n', () => {
     it('should return error if argument is not valid', () => {
         expect(romanNumber('')).to.equal('Error');
         expect(romanNumber('String')).to.equal('Error');
+    });
+});
+describe('to Arabic Numerals Test: \n', () => {
+    it('should return values when input is terminated by is I*', () => {
+        expect(arabicNumber('I')).to.equal(1);
+        expect(arabicNumber('XII')).to.equal(12);
+        expect(arabicNumber('XXIII')).to.equal(23);
+        expect(arabicNumber('CI')).to.equal(101);
+        expect(arabicNumber('DII')).to.equal(502);
+    });
+    it('should return values when input include IV XL CD', () => {
+        expect(arabicNumber('IV')).to.equal(4);
+        expect(arabicNumber('XIV')).to.equal(14);
+        expect(arabicNumber('XL')).to.equal(40);
+        expect(arabicNumber('XLIV')).to.equal(44);
+        expect(arabicNumber('CD')).to.equal(400);
+    });
+    it('should return values when input is terminated by is VI*', () => {
+        expect(arabicNumber('VI')).to.equal(6);
+        expect(arabicNumber('XVII')).to.equal(17);
+        expect(arabicNumber('XXVIII')).to.equal(28);
+        expect(arabicNumber('CVI')).to.equal(106);
+        expect(arabicNumber('DVIII')).to.equal(508);
+    });
+    it('should return values when input include IX, XC or CM', () => {
+        expect(arabicNumber('IX')).to.equal(9);
+        expect(arabicNumber('XIX')).to.equal(19);
+        expect(arabicNumber('XC')).to.equal(90);
+        expect(arabicNumber('XCIX')).to.equal(99);
+        expect(arabicNumber('CM')).to.equal(900);
+    });
+    it('should return valies when input is a new letter', () => {
+        expect(arabicNumber('V')).to.equal(5);
+        expect(arabicNumber('X')).to.equal(10);
+        expect(arabicNumber('L')).to.equal(50);
+        expect(arabicNumber('C')).to.equal(100);
+        expect(arabicNumber('D')).to.equal(500);
+        expect(arabicNumber('M')).to.equal(1000);
     });
 });
